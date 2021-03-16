@@ -1,0 +1,11 @@
+.cards {
+  list-style: none;
+  width: 920px;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  column-gap: 100px;
+}
+
+/* Этот блок с элементами позволяет сделать карточку статьи/товара с изображением, заголовком и текстом */
