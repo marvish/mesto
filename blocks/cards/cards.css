@@ -1,11 +1,19 @@
 .cards {
   list-style: none;
-  width: 920px;
+  width: 100%;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 240px);
-  column-gap: 100px;
+  grid-template-columns: repeat(auto-fill, 282px);
+  gap: 20px 17px;
+  justify-content: center;
 }
 
-/* Этот блок с элементами позволяет сделать карточку статьи/товара с изображением, заголовком и текстом */
+@media screen and (max-width: 424px) {
+  .cards {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 20px;
+  }
+}
+
