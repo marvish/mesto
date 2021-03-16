@@ -1,3 +1,19 @@
 .profile__info {
-  width: calc(100% - 127.5px - 20px - 150px);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .profile__info {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 618px) {
+  .profile__info {
+    min-width: 282px;
+    align-items: center;
+    margin: 27px 0 33px;
+  }
 }

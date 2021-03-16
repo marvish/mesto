@@ -6,8 +6,8 @@
   color: #545454;
 }
 
-/* @media screen and (max-width: 767px) {
+@media screen and (max-width: 424px) {
   .footer__copyright {
-    line-height: 1;
+    font-size: 14px;
   }
-} */
+}

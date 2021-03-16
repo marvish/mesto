@@ -5,21 +5,21 @@
   box-sizing: border-box;
 }
 
-/* @media screen and (max-width: 1279px) {
-  .footer {
-    padding: 0 48px;
-  }
-}
-
 @media screen and (max-width: 1023px) {
   .footer {
-    padding: 0 24px;
+    max-width: 720px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .footer {
-    padding-left: 16px;
-    flex-direction: column;
+    padding: 0 19px;
   }
-} */
+}
+
+@media screen and (max-width: 424px) {
+  .footer {
+    padding: 0 19px;
+    margin: 48px auto 36px;
+  }
+}

@@ -8,3 +8,25 @@
   padding: 0;
 
 }
+
+@media screen and (max-width: 767px) {
+  .profile__add-button {
+    grid-column: 2;
+    background-image: url(../../../images/profile__add-button-767.png);
+    width: 100%;
+    max-width: 350px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    justify-self: start;
+
+  }
+}
+
+@media screen and (max-width: 618px) {
+  .profile__add-button {
+    width: 282px;
+    background-image: url(../../../images/profile__add-button-320.png);
+    height: 50px;
+}
+}
