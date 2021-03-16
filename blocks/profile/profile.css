@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     justify-items: center;
-    row-gap: 20px;
+    gap: 20px;
   }
 }
 
