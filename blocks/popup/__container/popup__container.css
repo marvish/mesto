@@ -1,12 +1,8 @@
 .popup__container {
   display: flex;
   flex-direction: column;
-  position: absolute;
   width: 430px;
   box-sizing: border-box;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 530px) {
