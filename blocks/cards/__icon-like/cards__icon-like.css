@@ -1,7 +1,21 @@
-.cards__description {
-  margin: 0;
-  text-align: center;
-  line-height: 23px;
-  font-size: 18px;
-  font-weight: normal;
+.cards__icon-like {
+  height: 19px;
+  min-width: 22px;
+  background-image: url(../../../images/icon-like.svg);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.cards__icon-like:focus {
+  outline: none;
+}
+
+.cards__icon-like:active {
+  outline: none;
+  background-image: url(../../../../images/icon-like_active.png);
 }
