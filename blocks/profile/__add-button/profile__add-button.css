@@ -6,7 +6,6 @@
   background-image: url(../../../images/profile__add-button.png);
   background-size: cover;
   padding: 0;
-
 }
 
 @media screen and (max-width: 767px) {
@@ -19,7 +18,6 @@
     background-repeat: no-repeat;
     background-size: 100%;
     justify-self: start;
-
   }
 }
 
@@ -28,5 +26,5 @@
     width: 282px;
     background-image: url(../../../images/profile__add-button-320.png);
     height: 50px;
-}
+  }
 }
