@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: space-between;
   width: 430px;
-  min-height: 330px;
   box-sizing: border-box;
   background-color: white;
   margin-top: 40px;
@@ -16,6 +15,5 @@
     width: 282px;
     margin-top: 20px;
     padding: 25px 22px;
-    min-height: 322px;
   }
 }

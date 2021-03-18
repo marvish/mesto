@@ -1,4 +1,4 @@
-.cards__icon-like {
+.card__icon-like {
   height: 19px;
   min-width: 22px;
   background-image: url(../../../images/icon-like.svg);
@@ -9,13 +9,20 @@
   border-radius: 0;
   padding: 0;
   background-color: transparent;
+  transition: opacity .3s ease-out;
+  cursor: pointer;
+}
+.card__icon-like:hover {
+  opacity: 0.5;
 }
 
-.cards__icon-like:focus {
+.card__icon-like:focus {
   outline: none;
 }
 
-.cards__icon-like:active {
+.card__icon-like:active {
   outline: none;
-  background-image: url(../../../../images/icon-like_active.png);
+  background-image: url(../../../../images/icon-like_active.svg);
 }
+
+

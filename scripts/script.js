@@ -1,31 +1,42 @@
+// Находим кнопки редактирования и закрытия
 let editButton = document.querySelector('.profile__edit-button');
 let closeButton = document.querySelector('.popup__close-button');
-let popup = document.querySelector('.popup');
-let name = document.querySelector('.profile__name');
+// Находим поля профиля в DOM
+let profileName = document.querySelector('.profile__name');
 let job = document.querySelector('.profile__job');
+// Находим попап в DOM
+let popup = document.querySelector('.popup');
+// Находим форму в DOM
 let formElement = document.querySelector('.popup__form-container');
+// Находим поля формы в DOM
 let nameInput = document.querySelector('.popup__item_el_name');
 let jobInput = document.querySelector('.popup__item_el_job');
 
+// Функция открывает попап при нажатии на кнопку редактирования
 function openPopup() {
   popup.classList.add('popup_opened');
-  nameInput.value = name.textContent;
+  nameInput.value = profileName.textContent;
   jobInput.value = job.textContent;
 }
 
-editButton.addEventListener('click', openPopup);
-
+// Функция закрывает попап при нажатии на крестик
 function closePopup() {
   popup.classList.remove('popup_opened');
 }
 
-closeButton.addEventListener('click', closePopup);
-
+// Обработчик «отправки» формы, хотя пока
+// она никуда отправляться не будет
 function formSubmitHandler (evt) {
-  evt.preventDefault();
-  name.textContent = nameInput.value;
+  evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
+  // Вставляем новые значения с помощью textContent
+  profileName.textContent = nameInput.value;
   job.textContent = jobInput.value;
-  popup.classList.remove('popup_opened');
+  closePopup();
 }
 
+// Активирует редактирование/закрытие при нажатии на кнопку
+editButton.addEventListener('click', openPopup);
+closeButton.addEventListener('click', closePopup);
+// Прикрепляем обработчик к форме:
+// он будет следить за событием “submit” - «отправка»
 formElement.addEventListener('submit', formSubmitHandler);
