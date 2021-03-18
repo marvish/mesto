@@ -2,7 +2,13 @@
   display: flex;
   flex-direction: column;
   padding: 0;
-  margin: 0;
+  margin: 54px 0 48px;
   border: none;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 530px) {
+  .popup__input-container {
+    margin: 75px 0 45px;
+  }
 }

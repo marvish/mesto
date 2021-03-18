@@ -3,15 +3,16 @@
   height: 50px;
   border: none;
   background-color: black;
-  background-image: url(../../../images/profile__add-button.png);
+  background-image: url(../../../images/add-button.svg);
   background-size: cover;
   padding: 0;
+  border-radius: 2px;
 }
 
 @media screen and (max-width: 767px) {
   .profile__add-button {
+    background-image: url(../../../images/add-button_mobile.svg);
     grid-column: 2;
-    background-image: url(../../../images/profile__add-button-767.png);
     width: 100%;
     max-width: 350px;
     height: 80px;
@@ -24,7 +25,13 @@
 @media screen and (max-width: 618px) {
   .profile__add-button {
     width: 282px;
-    background-image: url(../../../images/profile__add-button-320.png);
     height: 50px;
   }
+}
+
+.profile__add-button:focus {
+  outline: none;
+}
+.profile__add-button:active {
+  outline: none;
 }
