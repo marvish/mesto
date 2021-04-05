@@ -27,48 +27,6 @@
 
       <section class="elements">
         <ul class="cards">
-          <li class="card">
-            <img class="card__image" src="./images/element__karachaevsk.jpg" alt="Карачаево-Черкессия">
-            <div class="card__container">
-              <h2 class="card__title">Карачаево-Черкессия</h2>
-              <button class="button card__icon-like" type="button" aria-label="Мне нравится"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img class="card__image" src="./images/element__crimea.jpg" alt="Крым">
-            <div class="card__container">
-              <h2 class="card__title">Крым</h2>
-              <button class="button card__icon-like" type="button" aria-label="Мне нравится"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img class="card__image" src="./images/element__ural.jpg" alt="Урал">
-            <div class="card__container">
-              <h2 class="card__title">Урал</h2>
-              <button class="button card__icon-like" type="button" aria-label="Мне нравится"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img class="card__image" src="./images/element__baikal.jpg" alt="Байкал">
-            <div class="card__container">
-              <h2 class="card__title">Байкал</h2>
-              <button class="button card__icon-like" type="button" aria-label="Мне нравится"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img class="card__image" src="./images/element__mountain-fisht.jpg" alt="Гора Фишт">
-            <div class="card__container">
-              <h2 class="card__title">Гора Фишт</h2>
-              <button class="button card__icon-like" type="button" aria-label="Мне нравится"></button>
-            </div>
-          </li>
-          <li class="card">
-            <img class="card__image" src="./images/element__carelia.jpg" alt="Карелия">
-            <div class="card__container">
-              <h2 class="card__title">Карелия</h2>
-              <button class="button card__icon-like" type="button" aria-label="Мне нравится"></button>
-            </div>
-          </li>
         </ul>
       </section>
       </main>
@@ -77,19 +35,44 @@
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
 
-    <div class="popup">
+
+    <div id="edit-profile-popup" class="popup">
       <div class="popup__container">
-        <button class="button popup__close-button" type="button" aria-label="Закрыть"></button>
-        <form class="popup__form-container" name="edit-form">
+        <button id="close-edit-profile-popup" class="button popup__close-button" type="button" aria-label="Закрыть"></button>
+        <form id="edit-profile-form" class="popup__form-container" name="edit-profile-form">
           <h2 class="popup__title">Редактировать профиль</h2>
           <fieldset class="popup__input-container">
-            <input class="popup__item popup__item_el_name" type="text" name="name" placeholder="Ваше имя" required>
-            <input class="popup__item popup__item_el_job" type="text" name="job" placeholder="Ваша должность" required>
+            <input id="user-name" class="popup__item" type="text" name="name" placeholder="Ваше имя" required>
+            <input id="user-job" class="popup__item" type="text" name="job" placeholder="Ваша должность" required>
           </fieldset>
-          <button class="popup__save-button" type="submit">Сохранить</button>
+          <button id="save-profile-button" class="popup__action-button" type="submit">Сохранить</button>
         </form>
       </div>
     </div>
+
+    <div id="add-place-popup" class="popup">
+      <div class="popup__container">
+        <button id="close-add-place-popup" class="button popup__close-button" type="button" aria-label="Закрыть"></button>
+        <form id="add-place-form" class="popup__form-container" name="add-place-form">
+          <h2 class="popup__title">Новое место</h2>
+          <fieldset class="popup__input-container">
+            <input id="name-of-place" class="popup__item" type="text" name="name-of-place" placeholder="Название" required>
+            <input id="img-src" class="popup__item" type="text" name="img-src" placeholder="Ссылка на картинку" required>
+          </fieldset>
+          <button id="create-new-place-button" class="popup__action-button" type="submit">Создать</button>
+        </form>
+      </div>
+    </div>
+
+    <template id="card">
+      <li class="card">
+        <img class="card__image" src="" alt="">
+        <div class="card__container">
+          <h2 class="card__title"></h2>
+          <button class="button card__icon-like" type="button" aria-label="Мне нравится"></button>
+        </div>
+      </li>
+      </template>
 
     <script src="./scripts/script.js"></script>
 </body>
