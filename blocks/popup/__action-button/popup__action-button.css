@@ -1,4 +1,4 @@
-.popup__save-button {
+.popup__action-button {
   border: none;
   padding: 0;
   font-weight: 400;
@@ -16,13 +16,13 @@
 }
 
 @media screen and (max-width: 530px) {
-  .popup__save-button {
+  .popup__action-button {
     font-size: 14px;
     width: 238px;
     min-height: 46px;
   }
 }
 
-.popup__save-button:hover {
+.popup__action-button:hover {
   opacity: 0.8;
 }
