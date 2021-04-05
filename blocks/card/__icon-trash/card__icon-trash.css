@@ -1,0 +1,20 @@
+.card__icon-trash {
+  height: 19px;
+  min-width: 18px;
+  background-image: url(../../../images/icon-trash.svg);
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+}
+
+
+.card__icon-trash:focus {
+  outline: none;
+}
+
+.card__icon-trash:active {
+  outline: none;
+}

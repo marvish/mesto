@@ -64,8 +64,19 @@
       </div>
     </div>
 
+    <div id="image-popup" class="popup">
+      <div class="popup__image-popup">
+        <button id="close-image-popup" class="button popup__close-button" type="button" aria-label="Закрыть"></button>
+        <figure class="popup__image-container">
+          <img class="popup__image" src="" alt="">
+          <figcaption class="popup__caption"></figcaption>
+        </figure>
+      </div>
+    </div>
+
     <template id="card">
       <li class="card">
+        <button class="button card__icon-trash"></button>
         <img class="card__image" src="" alt="">
         <div class="card__container">
           <h2 class="card__title"></h2>
