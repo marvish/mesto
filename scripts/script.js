@@ -68,6 +68,7 @@ function addNewPlace(name, link) {
     popupImage.src = image.src;
     popupImageCaption = imagePopup.querySelector('.popup__caption');
     popupImageCaption.textContent = caption.textContent;
+    popupImage.alt = caption.textContent;
   });
 
   cards.prepend(cardItem);
