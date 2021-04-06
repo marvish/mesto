@@ -11,6 +11,8 @@ const job = document.querySelector('.profile__job');
 const editProfilePopup = document.querySelector('#edit-profile-popup');
 const addNewPlacePopup = document.querySelector('#add-place-popup');
 const imagePopup = document.querySelector('#image-popup');
+const popupImage = imagePopup.querySelector('.popup__image');
+const popupImageCaption = imagePopup.querySelector('.popup__caption');
 // Находим форму в DOM
 const editFormElement = document.querySelector('#edit-profile-form');
 const addFormElement = document.querySelector('#add-place-form');
@@ -20,10 +22,8 @@ const jobInput = document.querySelector('#user-job');
 const placeInput = document.querySelector('#name-of-place');
 const imgInput = document.querySelector('#img-src');
 
-
 const cards = document.querySelector('.cards');
 const cardTemplate = document.querySelector('#card').content;
-
 
 // Функция открывает попап при нажатии на кнопку редактирования
 function openPopup(popupType) {
@@ -35,8 +35,8 @@ function closePopup(popupType) {
   popupType.classList.remove('popup_opened');
 }
 
-// Функция добавляет новую карточку
-function addNewPlace(name, link) {
+// Функция создает новую карточку
+function createNewPlace(name, link) {
   const cardItem = cardTemplate.querySelector('.card').cloneNode(true);
   const cardImage = cardItem.querySelector('.card__image');
   const cardTitle = cardItem.querySelector('.card__title');
@@ -54,26 +54,24 @@ function addNewPlace(name, link) {
   // Удалить карточку
   const deleteButton = cardItem.querySelector('.card__icon-trash');
   deleteButton.addEventListener('click', function (evt) {
-    card = evt.target.closest('.card');
-    card.remove();
+    evt.target.closest('.card').remove();
   });
 
   // Открыть картинку
   cardImage.addEventListener('click', function (evt) {
     openPopup(imagePopup);
-    card = evt.target.closest('.card');
-    image = card.querySelector('.card__image');
-    caption = card.querySelector('.card__title');
-    popupImage = imagePopup.querySelector('.popup__image');
-    popupImage.src = image.src;
-    popupImageCaption = imagePopup.querySelector('.popup__caption');
-    popupImageCaption.textContent = caption.textContent;
-    popupImage.alt = caption.textContent;
+    popupImage.src = link;
+    popupImage.alt = name;
+    popupImageCaption.textContent = name;
   });
 
-  cards.prepend(cardItem);
+  return cardItem;
 }
 
+// Функция добавляет новую карточку
+function addNewCard(card) {
+  cards.prepend(card);
+}
 
 // Обработчик «отправки» формы, хотя пока
 // она никуда отправляться не будет
@@ -89,7 +87,8 @@ function editFormSubmitHandler (evt) {
 
 function addFormSubmitHandler (evt) {
   evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
-  addNewPlace(placeInput.value, imgInput.value);
+  const newCard = createNewPlace(placeInput.value, imgInput.value);
+  addNewCard(newCard);
   closePopup(addNewPlacePopup);
 }
 
@@ -153,7 +152,8 @@ const initialCards = [
 
 function showDefaultPlaces() {
   initialCards.forEach(function (item) {
-    addNewPlace(item.name, item.link);
+    const newCard = createNewPlace(item.name, item.link);
+    addNewCard(newCard);
   });
 }
 
